@@ -48,7 +48,7 @@ cockroach start-single-node --insecure --listen-addr=172.16.1.123:26257 --http-a
 
 # Open the command prompt and execute the following command to access the CockroachDB SQL shell:
 `
-C:\CockroachDB\cockroach\cockroach-v22.1.2.windows-6.2-amd64> cockroach sql --insecure --host=localhost:26257
+cockroach sql --insecure --host=localhost:26257
 `
 
 # To connect using an IP address, use the following command:
