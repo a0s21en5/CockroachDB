@@ -30,11 +30,12 @@ C:\CockroachDB\cockroach\cockroach-v21.2.0-rc.3.windows-6.2-amd64
 
 # Open a new instance of PowerShell and execute the following command:
 `
-C:\CockroachDB\cockroach\cockroach-v22.1.2.windows-6.2-amd64> cockroach version
+cockroach version
 `
 
 # In the same PowerShell window, execute the following command:
-`C:\CockroachDB\cockroach\cockroach-v22.1.2.windows-6.2-amd64> cockroach start-single-node --insecure --listen-addr=localhost:26257 --http-addr=localhost:8080
+`
+cockroach start-single-node --insecure --listen-addr=localhost:26257 --http-addr=localhost:8080
 `
 
 # Note: Close the PowerShell window only when you are not using or operating the database. To connect using an IP address, use the following command:
