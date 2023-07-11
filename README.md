@@ -15,7 +15,7 @@
 
 # After the successful execution of the above command, the following folder will be created:
 `
-C:\CockroachDB\cockroach\cockroach-v21.2.0-rc.3.windows-6.2-amd64
+C:\CockroachDB\cockroach\cockroach-v23.1.5.windows-6.2-amd64
 `
 # pen the environment variables settings from the Start menu:
 
