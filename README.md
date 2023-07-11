@@ -5,25 +5,19 @@
 
 ## Steps
 
-1. Create a new folder, for example: `C:\CockroachDB`.
+# Create a new folder, for example: 
+`C:\CockroachDB`.
 
-2. Open PowerShell with Admin rights and execute the following command:
-   ```powershell
-   $ErrorActionPreference = "Stop"
-   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-   $ProgressPreference = 'SilentlyContinue'
-   $null = New-Item -Type Directory -Force $env:appdata/cockroach
-   Invoke-WebRequest -Uri https://binaries.cockroachdb.com/cockroach-v22.1.11.windows-6.2-amd64.zip -OutFile cockroach.zip
-   Expand-Archive -Force -Path cockroach.zip
-   Copy-Item -Force "cockroach/cockroach-v22.1.11.windows-6.2-amd64/cockroach.exe" -Destination $env:appdata/cockroach
-   $Env:PATH += ";$env:appdata/cockroach"
+# Open PowerShell with Admin rights and execute the following command:
+`
+   $ErrorActionPreference = "Stop"; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12;$ProgressPreference = 'SilentlyContinue'; $null = New-Item -Type Directory -Force $env:appdata/cockroach; Invoke-WebRequest -Uri https://binaries.cockroachdb.com/cockroach-v23.1.5.windows-6.2-amd64.zip -OutFile cockroach.zip; Expand-Archive -Force -Path cockroach.zip; Copy-Item -Force "cockroach/cockroach-v23.1.5.windows-6.2-amd64/cockroach.exe" -Destination $env:appdata/cockroach; $Env:PATH += ";$env:appdata/cockroach"
+`
 
-3. After the successful execution of the above command, the following folder will be created:
+# After the successful execution of the above command, the following folder will be created:
 `
 C:\CockroachDB\cockroach\cockroach-v21.2.0-rc.3.windows-6.2-amd64
 `
-
-4. pen the environment variables settings from the Start menu:
+# pen the environment variables settings from the Start menu:
 
 * Click on "Environment Variables."
 * Under the "System variables" section, locate and select  
@@ -34,33 +28,34 @@ C:\CockroachDB\cockroach\cockroach-v21.2.0-rc.3.windows-6.2-amd64
 `
 * Click on the "OK" button.
 
-5. Open a new instance of PowerShell and execute the following command:
+# Open a new instance of PowerShell and execute the following command:
 `
 C:\CockroachDB\cockroach\cockroach-v22.1.2.windows-6.2-amd64> cockroach version
 `
-6. In the same PowerShell window, execute the following command:
+
+# In the same PowerShell window, execute the following command:
 `C:\CockroachDB\cockroach\cockroach-v22.1.2.windows-6.2-amd64> cockroach start-single-node --insecure --listen-addr=localhost:26257 --http-addr=localhost:8080
 `
 
-7. Note: Close the PowerShell window only when you are not using or operating the database. To connect using an IP address, use the following command:
+# Note: Close the PowerShell window only when you are not using or operating the database. To connect using an IP address, use the following command:
 `
 cockroach start-single-node --insecure --listen-addr=172.16.1.123:26257 --http-addr=172.16.1.123:8080
 `
 
-8. To access the CockroachDB web interface, open the following link in your browser:
+# To access the CockroachDB web interface, open the following link in your browser:
 `http://localhost:8080/`
 
-9. Open the command prompt and execute the following command to access the CockroachDB SQL shell:
+# Open the command prompt and execute the following command to access the CockroachDB SQL shell:
 `
 C:\CockroachDB\cockroach\cockroach-v22.1.2.windows-6.2-amd64> cockroach sql --insecure --host=localhost:26257
 `
 
-10. To connect using an IP address, use the following command:
+# To connect using an IP address, use the following command:
 `
 cockroach sql --insecure --host=172.16.1.123:26257
 `
 
-11. If you prefer a graphical SQL editor, you can download SQL Editor (SQL Wizard) from the following link:
+# If you prefer a graphical SQL editor, you can download SQL Editor (SQL Wizard) from the following link:
 `
 https://dbeaver.io/download/
 `
