@@ -1,7 +1,7 @@
 # Setting up CockroachDB on Windows
 
 ## Prerequisites
-- Windows operating system
+- Windows Operating System
 
 ## Steps
 
